@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+repositories {
+    mavenCentral()
+}
+
+//打包maven
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            // 生成的文件夹的名字 repo
+            repository(url: uri('repo'))
+            // 设置插件的GAV参数
+            // 项目中引入mavan的格式就是 com.dragon.plugin:myPlugin:1.0
+            pom.groupId = 'com.dragon.plugin'
+            pom.artifactId = 'myPlugin'
+            pom.version = 1.0
+        }
+    }
+}
