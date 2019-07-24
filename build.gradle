@@ -5,12 +5,12 @@ buildscript {
         google()
         jcenter()
         maven {
-            url uri('D:\\projects\\DragonForest\\DragonForestPlugin\\aopplugin\\repo')
+            url 'http://localhost:8081/repository/HllTest/'
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath 'com.dragon.plugin:aspectjPlugin:1.0'
+        classpath 'com.dragonforest.plugin:AspectjPlugin:1.0.0'
 //        classpath 'com.dragon.plugin:myPlugin:1.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,7 +21,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-
     }
 }
 

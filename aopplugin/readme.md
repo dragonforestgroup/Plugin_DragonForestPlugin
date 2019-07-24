@@ -14,10 +14,15 @@ repositories {
         }
     }
     dependencies {
-        classpath 'com.dragon.plugin:aspectjPlugin:1.0'
+        ...
+        classpath 'com.dragonforest.plugin:AspectjPlugin:1.0.0'
     }
 ```
-2. moudle 的build.gradle中添加 ：
+2. module 的build.gradle中添加依赖：
+```
+implementation 'org.aspectj:aspectjrt:1.9.2'
+```
+3. module 的build.gradle中添加 ：
 apply plugin: 'aspectj-plugin'
 
 即可完成；
